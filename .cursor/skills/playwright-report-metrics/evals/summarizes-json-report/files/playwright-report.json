@@ -1,0 +1,277 @@
+{
+  "config": {
+    "version": "1.49.0",
+    "projects": [
+      { "name": "chromium", "id": "chromium" },
+      { "name": "firefox", "id": "firefox" }
+    ]
+  },
+  "suites": [
+    {
+      "title": "checkout.spec.ts",
+      "file": "tests/checkout.spec.ts",
+      "line": 0,
+      "column": 0,
+      "specs": [
+        {
+          "title": "pay by card",
+          "ok": true,
+          "tags": [],
+          "id": "pay-by-card",
+          "file": "tests/checkout.spec.ts",
+          "line": 8,
+          "column": 1,
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "status": "expected",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "status": "passed",
+                  "duration": 45000,
+                  "retry": 0,
+                  "startTime": "2026-11-09T08:00:01.000Z",
+                  "attachments": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "promo removed under 500",
+          "ok": false,
+          "tags": [],
+          "id": "promo-removed",
+          "file": "tests/checkout.spec.ts",
+          "line": 24,
+          "column": 1,
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "status": "unexpected",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "status": "failed",
+                  "duration": 2400,
+                  "retry": 0,
+                  "startTime": "2026-11-09T08:00:50.000Z",
+                  "error": {
+                    "message": "Expected discount 0, received 10"
+                  },
+                  "attachments": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "home.spec.ts",
+      "file": "tests/home.spec.ts",
+      "line": 0,
+      "column": 0,
+      "specs": [
+        {
+          "title": "home page loads",
+          "ok": true,
+          "tags": [],
+          "id": "home-loads",
+          "file": "tests/home.spec.ts",
+          "line": 4,
+          "column": 1,
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "status": "expected",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "status": "passed",
+                  "duration": 1200,
+                  "retry": 0,
+                  "startTime": "2026-11-09T08:00:02.000Z",
+                  "attachments": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "login.spec.ts",
+      "file": "tests/login.spec.ts",
+      "line": 0,
+      "column": 0,
+      "specs": [
+        {
+          "title": "user can sign in",
+          "ok": false,
+          "tags": [],
+          "id": "sign-in",
+          "file": "tests/login.spec.ts",
+          "line": 6,
+          "column": 1,
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "status": "unexpected",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "status": "failed",
+                  "duration": 8200,
+                  "retry": 0,
+                  "startTime": "2026-11-09T08:00:10.000Z",
+                  "error": {
+                    "message": "Timeout 5000ms waiting for locator('.login')"
+                  },
+                  "attachments": []
+                }
+              ]
+            },
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "status": "unexpected",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "status": "failed",
+                  "duration": 9100,
+                  "retry": 0,
+                  "startTime": "2026-11-09T08:00:12.000Z",
+                  "error": {
+                    "message": "Timeout 5000ms waiting for locator('.login')"
+                  },
+                  "attachments": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "catalog.spec.ts",
+      "file": "tests/catalog.spec.ts",
+      "line": 0,
+      "column": 0,
+      "specs": [
+        {
+          "title": "search milk",
+          "ok": true,
+          "tags": [],
+          "id": "search-milk",
+          "file": "tests/catalog.spec.ts",
+          "line": 5,
+          "column": 1,
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "status": "flaky",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "status": "failed",
+                  "duration": 3000,
+                  "retry": 0,
+                  "startTime": "2026-11-09T08:00:20.000Z",
+                  "error": {
+                    "message": "Timeout 5000ms waiting for locator('.search')"
+                  },
+                  "attachments": []
+                },
+                {
+                  "workerIndex": 1,
+                  "status": "passed",
+                  "duration": 2800,
+                  "retry": 1,
+                  "startTime": "2026-11-09T08:00:24.000Z",
+                  "attachments": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "account.spec.ts",
+      "file": "tests/account.spec.ts",
+      "line": 0,
+      "column": 0,
+      "specs": [
+        {
+          "title": "reset link expires",
+          "ok": true,
+          "tags": [],
+          "id": "reset-link",
+          "file": "tests/account.spec.ts",
+          "line": 11,
+          "column": 1,
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [
+                {
+                  "type": "fixme",
+                  "description": "ще не узгоджено R-20"
+                }
+              ],
+              "expectedStatus": "skipped",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "status": "skipped",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "status": "skipped",
+                  "duration": 0,
+                  "retry": 0,
+                  "startTime": "2026-11-09T08:00:30.000Z",
+                  "attachments": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-11-09T08:00:00.000Z",
+    "duration": 62000,
+    "expected": 2,
+    "unexpected": 3,
+    "flaky": 1,
+    "skipped": 1
+  }
+}

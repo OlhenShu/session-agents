@@ -1,0 +1,7 @@
+---
+type: llm
+focus: trace
+weight: 1
+---
+
+The result matches this description: Записка за розділами скіла. Підсумок зі stats: очікувані 2, несподівані 3, нестабільні 1, пропущені 1, прогін 62 с. Частка нестабільних 1/6. Нестабільний тест search milk, час повтору 2,8 с. Дві групи unexpected: login.spec.ts з помилкою Timeout 5000ms waiting for locator('.login') у chromium і firefox; checkout.spec.ts з помилкою Expected discount 0, received 10 лише в chromium. Найповільніший тест pay by card, 45 с. Пропуск reset link expires з позначкою fixme і текстом «ще не узгоджено R-20». Кореневих errors немає. У кінці сказано, що звіт не дає покриття вимог, не каже, чи баг новий, і не є дозволом на реліз. Баг-репорт і правка тесту не пропонуються.

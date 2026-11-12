@@ -1,0 +1,15 @@
+schema_version: "1.1"
+name: clusters-and-slow-test
+expected_outcome: |
+  The assessment reads results.json. It reports wall-clock 186000 ms,
+  stats expected 6, unexpected 3, flaky 1, skipped 1. It clusters the
+  three checkout failures on tests/checkout.spec.ts and the error
+  Timeout 5000ms waiting for locator('.pay'), including pays with card
+  on chromium (two failed attempts) and firefox, and applies coupon on
+  chromium. It names logs in on chromium as flaky: the first attempt
+  failed with net::ERR_CONNECTION_RESET and the second passed. It names
+  loads grid as the slowest test at 142000 ms, more than half of the
+  wall-clock. The verdict is broken because the failures cluster.
+  It does not invent a pass-rate gate or a root cause.
+context:
+  scaffold_script: place-files.sh

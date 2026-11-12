@@ -1,0 +1,157 @@
+{
+  "stats": {
+    "startTime": "2026-11-08T08:00:00.000Z",
+    "duration": 90000,
+    "expected": 7,
+    "skipped": 0,
+    "unexpected": 3,
+    "flaky": 1
+  },
+  "suites": [
+    {
+      "file": "tests/checkout.spec.ts",
+      "specs": [
+        {
+          "title": "pays with card",
+          "tests": [
+            {
+              "projectName": "chromium",
+              "status": "unexpected",
+              "results": [
+                { "retry": 0, "status": "failed", "duration": 5200, "error": { "message": "Timeout 5000ms waiting for locator('.pay')" } },
+                { "retry": 1, "status": "failed", "duration": 5100, "error": { "message": "Timeout 5000ms waiting for locator('.pay')" } }
+              ]
+            },
+            {
+              "projectName": "firefox",
+              "status": "unexpected",
+              "results": [
+                { "retry": 0, "status": "failed", "duration": 6100, "error": { "message": "Timeout 5000ms waiting for locator('.pay')" } }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "applies coupon",
+          "tests": [
+            {
+              "projectName": "chromium",
+              "status": "unexpected",
+              "results": [
+                { "retry": 0, "status": "failed", "duration": 5300, "error": { "message": "Timeout 5000ms waiting for locator('.pay')" } }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "tests/auth.spec.ts",
+      "specs": [
+        {
+          "title": "logs in",
+          "tests": [
+            {
+              "projectName": "chromium",
+              "status": "flaky",
+              "results": [
+                { "retry": 0, "status": "failed", "duration": 400, "error": { "message": "net::ERR_CONNECTION_RESET" } },
+                { "retry": 1, "status": "passed", "duration": 900 }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "tests/catalog.spec.ts",
+      "specs": [
+        {
+          "title": "loads grid",
+          "tests": [
+            {
+              "projectName": "chromium",
+              "status": "expected",
+              "results": [{ "retry": 0, "status": "passed", "duration": 8000 }]
+            }
+          ]
+        },
+        {
+          "title": "filters",
+          "tests": [
+            {
+              "projectName": "chromium",
+              "status": "expected",
+              "results": [{ "retry": 0, "status": "passed", "duration": 700 }]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "tests/home.spec.ts",
+      "specs": [
+        {
+          "title": "hero",
+          "tests": [
+            {
+              "projectName": "chromium",
+              "status": "expected",
+              "results": [{ "retry": 0, "status": "passed", "duration": 400 }]
+            }
+          ]
+        },
+        {
+          "title": "footer",
+          "tests": [
+            {
+              "projectName": "chromium",
+              "status": "expected",
+              "results": [{ "retry": 0, "status": "passed", "duration": 300 }]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "tests/cart.spec.ts",
+      "specs": [
+        {
+          "title": "adds item",
+          "tests": [
+            {
+              "projectName": "chromium",
+              "status": "expected",
+              "results": [{ "retry": 0, "status": "passed", "duration": 500 }]
+            }
+          ]
+        },
+        {
+          "title": "empties",
+          "tests": [
+            {
+              "projectName": "chromium",
+              "status": "expected",
+              "results": [{ "retry": 0, "status": "passed", "duration": 450 }]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "tests/search.spec.ts",
+      "specs": [
+        {
+          "title": "filters by brand",
+          "tests": [
+            {
+              "projectName": "chromium",
+              "status": "expected",
+              "results": [{ "retry": 0, "status": "passed", "duration": 2000 }]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

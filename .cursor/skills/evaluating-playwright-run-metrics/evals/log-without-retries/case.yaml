@@ -1,0 +1,11 @@
+schema_version: "1.1"
+name: log-without-retries
+expected_outcome: |
+  The assessment uses only the pasted log. Counts are 9 passed, 2 failed,
+  1 skipped, and the summary duration is 21.4s. The two cart.spec.ts
+  failures (removes item 5.1s and updates qty 5.0s) form a cluster on
+  that file and the error locator.click: Timeout 5000ms exceeded.
+  hero at 8.2s is the slowest line shown and does not exceed half of
+  21.4s. Flaky or retry information is marked as not in the report,
+  not as zero. The verdict is broken because the two failures cluster.
+  No project, duration, or error is invented for tests the log does not show.

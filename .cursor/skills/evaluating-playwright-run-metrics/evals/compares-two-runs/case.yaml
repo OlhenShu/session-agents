@@ -1,0 +1,13 @@
+schema_version: "1.1"
+name: compares-two-runs
+expected_outcome: |
+  The assessment treats run-a.json as yesterday and run-b.json as today.
+  Yesterday wall-clock is 90000 ms with 3 unexpected checkout failures
+  and logs in flaky. Today wall-clock is 160000 ms, the checkout cluster
+  is gone, logs in passed on the first attempt, loads grid grew from
+  8000 ms to 120000 ms (more than half of today's wall-clock), and
+  filters by brand is a new isolated failure with error 500 from
+  /api/search. Improved and worse are both stated. The later run is
+  not called better overall. Its verdict is risky, not broken.
+context:
+  scaffold_script: place-files.sh

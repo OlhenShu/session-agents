@@ -1,0 +1,154 @@
+{
+  "stats": {
+    "startTime": "2026-11-09T08:00:00.000Z",
+    "duration": 160000,
+    "expected": 10,
+    "skipped": 0,
+    "unexpected": 1,
+    "flaky": 0
+  },
+  "suites": [
+    {
+      "file": "tests/checkout.spec.ts",
+      "specs": [
+        {
+          "title": "pays with card",
+          "tests": [
+            {
+              "projectName": "chromium",
+              "status": "expected",
+              "results": [{ "retry": 0, "status": "passed", "duration": 1800 }]
+            },
+            {
+              "projectName": "firefox",
+              "status": "expected",
+              "results": [{ "retry": 0, "status": "passed", "duration": 1900 }]
+            }
+          ]
+        },
+        {
+          "title": "applies coupon",
+          "tests": [
+            {
+              "projectName": "chromium",
+              "status": "expected",
+              "results": [{ "retry": 0, "status": "passed", "duration": 1700 }]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "tests/auth.spec.ts",
+      "specs": [
+        {
+          "title": "logs in",
+          "tests": [
+            {
+              "projectName": "chromium",
+              "status": "expected",
+              "results": [{ "retry": 0, "status": "passed", "duration": 500 }]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "tests/catalog.spec.ts",
+      "specs": [
+        {
+          "title": "loads grid",
+          "tests": [
+            {
+              "projectName": "chromium",
+              "status": "expected",
+              "results": [{ "retry": 0, "status": "passed", "duration": 120000 }]
+            }
+          ]
+        },
+        {
+          "title": "filters",
+          "tests": [
+            {
+              "projectName": "chromium",
+              "status": "expected",
+              "results": [{ "retry": 0, "status": "passed", "duration": 700 }]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "tests/home.spec.ts",
+      "specs": [
+        {
+          "title": "hero",
+          "tests": [
+            {
+              "projectName": "chromium",
+              "status": "expected",
+              "results": [{ "retry": 0, "status": "passed", "duration": 400 }]
+            }
+          ]
+        },
+        {
+          "title": "footer",
+          "tests": [
+            {
+              "projectName": "chromium",
+              "status": "expected",
+              "results": [{ "retry": 0, "status": "passed", "duration": 300 }]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "tests/cart.spec.ts",
+      "specs": [
+        {
+          "title": "adds item",
+          "tests": [
+            {
+              "projectName": "chromium",
+              "status": "expected",
+              "results": [{ "retry": 0, "status": "passed", "duration": 500 }]
+            }
+          ]
+        },
+        {
+          "title": "empties",
+          "tests": [
+            {
+              "projectName": "chromium",
+              "status": "expected",
+              "results": [{ "retry": 0, "status": "passed", "duration": 450 }]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "tests/search.spec.ts",
+      "specs": [
+        {
+          "title": "filters by brand",
+          "tests": [
+            {
+              "projectName": "chromium",
+              "status": "unexpected",
+              "results": [
+                {
+                  "retry": 0,
+                  "status": "failed",
+                  "duration": 3000,
+                  "error": { "message": "500 from /api/search" }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
